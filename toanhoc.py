@@ -47,4 +47,22 @@ class toanhoc:
             x = y
             y = temp - (a//b)*y
         return [d,x,y]
+    
+    # #Hàm pheta(n)
+    # def pheta(self,n,power) -> int:
+    #     if self.isPrime(n):
+    #         return n-1
+    #     else:
+    #         #tách số
+    #         a = 1
+    #         b = n
+    #         i = 0
+    #         for i in range(2,int(math.sqrt(n))+1):
+    #             while(b % i == 0):
+    #                 a = i
+    #                 b = b/i    
+    #             if(i != 0): 
+    #                 break
+    #         return self.pheta(n,i)*self.pheta(b,1)
         
+

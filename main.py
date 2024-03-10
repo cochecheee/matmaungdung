@@ -15,7 +15,7 @@ l = t.extendedEuclid(127,19)
 print("UCLN là: " + str(l[0]))
 print("x và y: " + str(l[1]) + " " +str(l[2]))
 
-p = t.pheta(1024,1)
-print("pheta(n) là: " + str(p))
+p = t.phi(9)
+print("phi(n) là: " + str(p))
 
 

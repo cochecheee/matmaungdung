@@ -48,21 +48,18 @@ class toanhoc:
             y = temp - (a//b)*y
         return [d,x,y]
     
-    # #Hàm pheta(n)
-    # def pheta(self,n,power) -> int:
-    #     if self.isPrime(n):
-    #         return n-1
-    #     else:
-    #         #tách số
-    #         a = 1
-    #         b = n
-    #         i = 0
-    #         for i in range(2,int(math.sqrt(n))+1):
-    #             while(b % i == 0):
-    #                 a = i
-    #                 b = b/i    
-    #             if(i != 0): 
-    #                 break
-    #         return self.pheta(n,i)*self.pheta(b,1)
-        
+    # #Hàm phi(n) --> OK
+    # Phi hàm euler sẽ bẳng tích n*(của n chia hết cho p (p|n)) * (1 - 1/p)
+    # với p là số nguyên tố
+    # mỗi p chỉ xuất hiện 1 lần
+    def phi(self, n):
+        res = n
+        for i in range(2,int(math.sqrt(n))+1):
+            if n % i == 0:
+                while(n%i==0):
+                    n = n // i
+                res = res - res//i
+        if n >  1:
+            res -= res//n
+        return res
 
